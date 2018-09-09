@@ -1,0 +1,39 @@
+{
+  "name": "botdelivejs",
+  "version": "1.0.0",
+  "description": "A BotDelive JavaScript SDK",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/**/**.js"
+  },
+  "keywords": [
+    "botdelive",
+    "api",
+    "bot",
+    "chatbot",
+    "2fa",
+    "push",
+    "notification",
+    "two-factor authentication",
+    "authentication",
+    "telegram",
+    "whatsapp",
+    "messenger"
+  ],
+  "author": "BotDelive",
+  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/BotDelive/bdJS.git"
+  },
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
