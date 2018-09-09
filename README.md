@@ -1,21 +1,21 @@
 ![botdelive](https://botdelive.com/images/logo.png)
 
-BotDelive
+About
 -------------
 
-#### About
-
-BotDelive is a Push Notification and 2-factor authentication API service that works over the chat bots (Telegram and Messenger).
+**BotDelive** is a Push Notification and 2-factor authentication API service that works over the chat bots (Telegram and Messenger).
 
         npm i botdelivejs --save
 
-#### Requirements
+Requirements
+-------------
 
 1. Create [an account](https://botdelive.com/login).
 2. Visit "Create App" menu on the dashboard and create one.
 3. Keep the secret key of the created app safe and save the app ID.
 
-#### Usage
+Usage
+-------------
 
 Let's initialize the library first. Don't forget to replace `<YOUR_APP_ID>` and `<YOUR_SECRET_KEY>`.
 ```javascript
