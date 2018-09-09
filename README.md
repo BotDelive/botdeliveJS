@@ -1,16 +1,22 @@
-##BotDelive
+![botdelive](https://botdelive.com/images/logo.png)
 
-####What is it?
+BotDelive
+-------------
+
+####About
+
 BotDelive is a Push Notification and 2-factor authentication API service that works over the chat bots (Telegram and Messenger).
 
         npm i botdelivejs --save
 
 #####Requirements
+
 1. Create [an account](https://botdelive.com/login).
-2. Visit "Create App" menu on dashboard and create one.
-3. Keep in safe secret key of the created app and save the app ID.
+2. Visit "Create App" menu on the dashboard and create one.
+3. Keep the secret key of the created app safe and save the app ID.
 
 #####Usage
+
 Let's initialize the library first. Don't forget to replace `<YOUR_APP_ID>` and `<YOUR_SECRET_KEY>`.
 ```javascript
 const botdeliveJS = require('botdelivejs');
@@ -21,7 +27,7 @@ const bdJS = new botdeliveJS({
 });
 ```
 
-Verify the "Access Code":
+**Verify the "Access Code":**
 ```javascript
 bdJS.verify('<USER_GENERATED_ACCESS_CODE_HERE>', function (err, data) {
   if (err) {
@@ -31,7 +37,7 @@ bdJS.verify('<USER_GENERATED_ACCESS_CODE_HERE>', function (err, data) {
 });
 ```
 
-Send 2-factor authentication request **(long polling)**:
+**Send 2-factor authentication request (long polling):**
 ```javascript
 bdJS.auth('<USER_ID_HERE>', function (err, data) {
   if (err) {
@@ -41,7 +47,7 @@ bdJS.auth('<USER_ID_HERE>', function (err, data) {
 });
 ```
 
-Send Push Notification request:
+**Send Push Notification request:**
 ```javascript
 bdJS.verify('<USER_ID_HERE>', '<MESSAGE_HERE>', function (err, data) {
   if (err) {
