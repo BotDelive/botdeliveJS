@@ -31,7 +31,7 @@ const bdJS = new botdeliveJS({
 ```javascript
 bdJS.verify('<USER_GENERATED_ACCESS_CODE_HERE>', function (err, data) {
   if (err) {
-    return console.log(err);
+    console.log(err);
   }
   console.log(data);
 });
@@ -41,7 +41,7 @@ bdJS.verify('<USER_GENERATED_ACCESS_CODE_HERE>', function (err, data) {
 ```javascript
 bdJS.auth('<USER_ID_HERE>', function (err, data) {
   if (err) {
-    return console.log(err);
+    console.log(err);
   }
   console.log(data);
 });
@@ -51,7 +51,7 @@ bdJS.auth('<USER_ID_HERE>', function (err, data) {
 ```javascript
 bdJS.verify('<USER_ID_HERE>', '<MESSAGE_HERE>', function (err, data) {
   if (err) {
-    return console.log(err);
+    console.log(err);
   }
   console.log(data);
 });
