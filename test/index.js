@@ -1,4 +1,5 @@
 var bdJS = require('../index.js'),
+    expect = require('chai').expect,
     assert = require('chai').assert;
 
 var bd = new bdJS({
@@ -7,48 +8,36 @@ var bd = new bdJS({
 });
 
 describe('Functions', function () {
-    it('Verify is function', function (done) {
+    it('Verify', function (done) {
         assert.isFunction(bd.verify);
         done();
     });
-    it('Auth is function', function (done) {
+    it('Auth', function (done) {
         assert.isFunction(bd.auth);
         done();
     });
-    it('Push is function', function (done) {
+    it('Push', function (done) {
         assert.isFunction(bd.push);
         done();
     })
 });
 
-describe('Verify access code', function () {
-    it('responds as a valid object', function (done) {
+describe('Verify the Access Code', function () {
+    it('validation', function (done) {
         bd.verify('', function (err) {
-            if (typeof(err) === 'object') {
-                if (typeof err.internal !== 'undefined' && err.internal === true) {
-                    done("an internal error | " + JSON.stringify(err))
-                } else {
-                    done()
-                }
-            } else {
-                done("not an object")
-            }
+            expect(err).to.be.a('object');
+            expect(err.internal).is.a('undefined');
+            done();
         });
     });
 });
 
-describe('Send Push', function () {
-    it('responds as a valid object', function (done) {
+describe('Send a Push Notification', function () {
+    it('validation', function (done) {
         bd.push('', '', function (err) {
-            if (typeof(err) === 'object') {
-                if (typeof err.internal !== 'undefined' && err.internal === true) {
-                    done("an internal error | " + JSON.stringify(err))
-                } else {
-                    done()
-                }
-            } else {
-                done("not an object")
-            }
+            expect(err).to.be.a('object');
+            expect(err.internal).is.a('undefined');
+            done();
         });
     });
 });
