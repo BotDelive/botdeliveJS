@@ -10,9 +10,8 @@ About
 Requirements
 -------------
 
-1. Create [an account](https://botdelive.com/login).
-2. Visit "Create App" menu on the dashboard and create one.
-3. Keep the secret key of the created app safe and save the app ID.
+1. [Create an account](https://botdelive.com/login).
+2. Create an app on the dashboard to get appId and secretKey credentials.
 
 Usage
 -------------
@@ -29,31 +28,31 @@ const bdJS = new botdeliveJS({
 
 **Verify the "Access Code":**
 ```javascript
-bdJS.verify('<USER_GENERATED_ACCESS_CODE_HERE>', function (err, data) {
+bdJS.verify('<BOT_GENERATED_ACCESS_CODE>', function (err, data) {
   if (err) {
-    console.log(err);
+    return console.log(err);
   }
-  console.log(data);
+  return console.log(data);
 });
 ```
 
 **Send 2-factor authentication request (long polling):**
 ```javascript
-bdJS.auth('<USER_ID_HERE>', function (err, data) {
+bdJS.auth('<USER_ID>', function (err, data) {
   if (err) {
-    console.log(err);
+    return console.log(err);
   }
-  console.log(data);
+  return console.log(data);
 });
 ```
 
 **Send Push Notification request:**
 ```javascript
-bdJS.verify('<USER_ID_HERE>', '<MESSAGE_HERE>', function (err, data) {
+bdJS.verify('<USER_ID>', '<MESSAGE>', function (err, data) {
   if (err) {
-    console.log(err);
+    return console.log(err);
   }
-  console.log(data);
+  return console.log(data);
 });
 ```
 
