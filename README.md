@@ -48,7 +48,7 @@ bdJS.auth('<USER_ID>', function (err, data) {
 
 **Send Push Notification request:**
 ```javascript
-bdJS.verify('<USER_ID>', '<MESSAGE>', function (err, data) {
+bdJS.push('<USER_ID>', '<MESSAGE>', function (err, data) {
   if (err) {
     return console.log(err);
   }
